@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Registration Form</title>
+    <link rel="stylesheet" href="../CSS/webstyle.css">
+    <style>
+       /* main {
+        width: 81vw;
+      } */
+@media only screen and (max-width: 600px) {
+main,form{
+  width: 87vw;
+}
+}
+      @media only screen and ((min-width: 600px) and (max-width:992px)) {
+        main {
+          width: 68vw;
+          margin: 0.25vh 0.3vw;
+        }
+        nav {
+          width: 30vw;
+        }
+      }
+    </style>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 20px;">
+
+  <header>Swedru Secondary School <i>Swesco</i></header>
+                 <nav>
+        <!-- Navigation links -->
+        <ul>
+            <li><a href="./1-assignment.html">Home</a></li>
+            <li><a href="./2-assignment.html">Food</a></li>
+            <li><a href="./3-assignment.html">Form</a></li>
+            <li><a href="./tables.html">Course</a></li>
+            <li><a href="./time.html">Time</a></li>
+            <!-- <li><a href=""></a></li> -->
+        </ul>
+    </nav>
+    <aside class="red">side bar</aside>
+    <!-- <section class="red">
+        <article>Advert 1</article>
+        <article>Advert 2</article>
+        <article>Advert 3</article>
+    </section> -->
+    <!-- <link rel="stylesheet" type="text/css" href="./style.css"/> -->
+
+       
+           
+   
+    <!-- <h1 align="center">Swedru Secondary School <i>Swesco</i></h1> -->
+    <main style="width: 60vw; text-align: left;">
+    <form action="" method="POST">
+        
+        <fieldset style="margin-bottom: 20px; ">
+            <legend style="font-weight: bold; ">Personal Details</legend>
+
+            <label for="surname">SURNAME:</label>
+            <input type="text" id="surname" name="surname" placeholder="Enter your Surname" required style="width: 300px;"><br><br>
+            <br>
+            <br>            
+            <label for="firstname">FIRST NAME:</label>
+            <input type="text" id="firstname" name="firstname" placeholder="Enter your First Name" required style="width: 300px;"><br><br>
+            <br>
+            <br>
+            <label for="dob">DATE OF BIRTH:</label>
+            <input type="date" id="dob" name="dob">
+            <br>
+            <br>
+            <label for="gender">GENDER:</label>
+            <select id="gender" name="gender">
+                <option value="" disabled selected>-- Select Gender --</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select><br><br>
+            <br>
+            <br>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="eg. student@gmail.com" style="width: 300px;">
+            <br>
+            <br>
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="059-0000000">
+        </fieldset>
+
+
+        <fieldset style="margin-bottom: 20px; ">
+            <legend style="font-weight: bold; color: darkblue;">Junior High School (JHS) Detail</legend>
+
+            <label for="jhs_name">Name of JHS attended:</label>
+            <input type="text" id="jhs_name" name="jhs_name" placeholder="Enter the Name of JHS" style="width: 300px;">
+            
+            <br>
+            <br>
+            <label for="jhs_region">Region of JHS attended:</label>
+            <select id="jhs_region" name="jhs_region">
+                <option value="" disabled selected>-- Select Region --</option>
+                <option value="greater_accra">Greater Accra</option>
+                <option value="ashanti">Ashanti</option>
+                <option value="central">Central</option>
+                <option value="eastern">Eastern</option>
+                <option value="volta">Volta</option>
+                <option value="western">Western</option>
+                <option value="northern">Northern</option>
+                </select><br>
+        </fieldset>
+
+
+        <fieldset style="margin-bottom: 20px; ">
+            <legend style="font-weight: bold; color: darkblue;">Senior High School (SHS) Details</legend>
+
+            <label for="index_number">Index Number:</label>
+            <input type="text" id="index_number" name="index_number" placeholder="Enter your index number"><br><br>
+          <br>
+          <br>
+            <label for="program">Programme of Study:</label>
+            <select id="program" name="program">
+                <option value="" disabled selected>-- Select Programme --</option>
+                <option value="general_arts">General Arts</option>
+                <option value="general_science">General Science</option>
+                <option value="business">Business</option>
+                <option value="home_economics">Home Economics</option>
+                <option value="visual_arts">Visual Arts</option>
+                <option value="agriculture">Agriculture</option>
+                <option value="technical">Technical</option>
+            </select>
+            <br>
+            <br>
+
+            <label for="date_entered">Date of Admission:</label>
+            <input type="date" id="date_entered" name="date_entered">
+            &nbsp;&nbsp;&nbsp;
+            <label for="date_completed">Date of Completion:</label>
+            <input type="date" id="date_completed" name="date_completed">
+            <br>
+            <br>
+
+            <label for="nickname">Enter your nickname used in school:</label>
+            <input type="text" id="nickname" name="nickname" placeholder="Enter your Nickname" style="width: 300px;">
+            <br>
+            <br>
+
+            <label for="house">Select your School House Number:</label>
+            <select id="house" name="house">
+                <option value="" disabled selected>-- Select House --</option>
+                <option value="house1">House 1 (John Mensah)</option>
+                <option value="house2">House 2</option>
+                <option value="house3">House 3</option>
+                <option value="house4">House 4</option>
+            </select>
+            <br>
+            <br>
+
+            <p style="font-weight: bold;">Select Position Held in School:</p>
+            <input type="checkbox" id="sp" name="position" value="School Prefect">
+            <label for="sp">School Prefect</label>
+            <br>
+            <br>
+
+            <input type="checkbox" id="asp" name="position" value="Assistant School Prefect">
+            <label for="asp">Assistant School Prefect</label>
+            <br>
+            <br>
+
+            <input type="checkbox" id="gp" name="position" value="Girls Prefect">
+            <label for="gp">Girls Prefect</label>
+            <br>
+            <br>
+
+            <input type="checkbox" id="co" name="position" value="Compound Overseer">
+            <label for="co">Compound Overseer</label>
+            <br>
+            <br>
+
+            <input type="checkbox" id="dp" name="position" value="Dormitory Prefect">
+            <label for="dp">Dormitory Prefect</label>
+            <br>
+            <br>
+            
+            <input type="checkbox" id="src" name="position" value="SRC Executive">
+            <label for="src">SRC Executive</label>
+            <br>
+        </fieldset>
+
+
+        <fieldset style="margin-bottom: 20px; ">
+            <legend style="font-weight: bold; color: darkblue;">Other Informations</legend>
+
+            <p>Choose the sports you loved in School:</p>
+            <input type="checkbox" id="football" name="sports" value="Football">
+            <label for="football">Football</label>
+            &nbsp;&nbsp;
+            <input type="checkbox" id="athletics" name="sports" value="Athletics">
+            <label for="athletics">Athletics</label>
+            &nbsp;&nbsp;
+            <input type="checkbox" id="volleyball" name="sports" value="Volleyball">
+            <label for="volleyball">Volleyball</label>
+            &nbsp;&nbsp;
+            <input type="checkbox" id="hockey" name="sports" value="Hockey">
+            <label for="hockey">Hockey</label>
+        </fieldset>
+
+        <br>
+        <button type="submit" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">Submit Registration</button>
+        <button type="reset" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">Clear Form</button>
+
+    </form>
+
+</main>
+  
+     
+
+ <footer>Developed by IT Group 8 &reg; &trade; 2025 </footer>
+</body>
+</html>
