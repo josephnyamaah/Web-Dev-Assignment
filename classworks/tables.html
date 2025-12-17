@@ -7,128 +7,293 @@
     <link rel="stylesheet" href="../CSS/webstyle.css">
     <link rel="icon" href="../pics/logo.jpeg">
     <style>
-  main {
-    width: 81vw;
-  }
-  @media only screen and (min-width: 600px) and (max-width:992px) {
-    main {
-      width: 68vw;
-      margin: 0.25vh 0.3vw;
-    }
-    nav {
-      width: 30vw;
-    }
-  }
-  /* Mobile specific table wrapper */
-  @media only screen and (max-width: 600px) {
-    main {
-      width: 98vw;
-    }
-  }
-  </style>
+      main {
+        width: 81vw;
+      }
+      
+      /* Student Information styling */
+      .student-info {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+      
+      .student-info p {
+        margin: 8px 0;
+        font-size: 1rem;
+      }
+      
+      h2 {
+        color: #333333;
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 5px;
+        margin: 20px 0 15px 0;
+      }
+      
+      /* Table improvements */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        background-color: white;
+        color: #333;
+      }
+      
+      th, td {
+        padding: 12px;
+        border: 1px solid #ddd;
+      }
+      
+      thead tr {
+        background-color: #68228baf;
+        color: white;
+        font-weight: bold;
+      }
+      
+      tbody tr:nth-child(odd) {
+        background-color: #f9f9f9;
+      }
+      
+      tbody tr:hover {
+        background-color: #f0e6ff;
+      }
+      
+      tfoot tr {
+        background-color: #e6d9ff;
+        font-weight: bold;
+      }
+      
+      tfoot tr:last-child {
+        background-color: #68228baf;
+        color: white;
+      }
+      
+      /* TABLET DEVICES */
+      @media only screen and (min-width: 600px) and (max-width: 992px) {
+        main {
+          width: 68vw !important;
+          margin: 0.25vh 0.3vw;
+        }
+        
+        nav {
+          width: 30vw;
+        }
+        
+        .student-info p {
+          font-size: 0.9rem;
+        }
+        
+        table {
+          font-size: 0.85rem;
+        }
+        
+        th, td {
+          padding: 8px 6px;
+        }
+      }
+      
+      /* MOBILE DEVICES */
+      @media only screen and (max-width: 600px) {
+        main {
+          width: 98vw !important;
+          margin: 0.25vh 0.25vw;
+          padding: 10px 5px;
+          min-height: auto;
+        }
+        
+        h2 {
+          font-size: 1.2rem;
+          margin: 15px 0 10px 0;
+        }
+        
+        .student-info {
+          padding: 10px;
+        }
+        
+        .student-info p {
+          font-size: 0.85rem;
+          margin: 6px 0;
+        }
+        
+        /* Make table scrollable horizontally */
+        .table-wrapper {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          margin: 10px 0;
+        }
+        
+        table {
+          font-size: 0.7rem;
+          min-width: 500px; /* Ensures table doesn't get too cramped */
+        }
+        
+        th, td {
+          padding: 6px 4px;
+          font-size: 0.65rem;
+        }
+        
+        /* Make first column sticky */
+        th:first-child,
+        td:first-child {
+          position: sticky;
+          left: 0;
+          background-color: #68228baf;
+          color: white;
+          z-index: 2;
+          font-weight: bold;
+        }
+        
+        tbody td:first-child {
+          background-color: #f9f9f9;
+          color: #333;
+        }
+        
+        tbody tr:nth-child(odd) td:first-child {
+          background-color: #f0f0f0;
+        }
+        
+        tfoot td:first-child {
+          background-color: #e6d9ff;
+        }
+        
+        tfoot tr:last-child td:first-child {
+          background-color: #68228baf;
+          color: white;
+        }
+      }
+      
+      /* LANDSCAPE MODE for mobile */
+      @media only screen and (max-height: 600px) and (orientation: landscape) {
+        main {
+          min-height: auto;
+        }
+        
+        h2 {
+          font-size: 1rem;
+          margin: 10px 0 8px 0;
+        }
+        
+        .student-info {
+          padding: 8px;
+        }
+        
+        .student-info p {
+          font-size: 0.75rem;
+          margin: 4px 0;
+        }
+        
+        table {
+          font-size: 0.65rem;
+        }
+        
+        th, td {
+          padding: 4px 3px;
+          font-size: 0.6rem;
+        }
+      }
+    </style>
 </head>
 <body>
 
     <header>
-        <h1 text-align: center; >Academic Transcript Summary</h1>
+        <h1 style="text-align: center;">Academic Transcript Summary</h1>
     </header>
 
- <nav>
+    <nav>
         <!-- Navigation links -->
         <ul>
-             <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="./2-assignment.html">Food</a></li>
             <li><a href="./3-assignment.html">Form</a></li>
             <li><a href="./tables.html">Course</a></li>
             <li><a href="./time.html">Time</a></li>
-            <!-- <li><a href=""></a></li> -->
         </ul>
     </nav>
+    
     <aside class="red">Side Bar</aside>
-    <main class="red" style="width: 82vw; min-height: 100vh;">
-        <h2 style="color: #333333; border-bottom: 2px solid #ccc; padding-bottom: 5px;">Student Information</h2>
-        
-        <p><strong>ID:</strong> 12345678</p>
-        <p><strong>Name:</strong> Joseph Nyamaah</p>
-        <p><strong>Program Level:</strong> Level 100</p>
-        <p><strong>Semester:</strong> Semester 1</p>
     
+    <main class="red">
+        <div class="student-info">
+            <h2>Student Information</h2>
+            <p><strong>ID:</strong> 12345678</p>
+            <p><strong>Name:</strong> Joseph Nyamaah</p>
+            <p><strong>Program Level:</strong> Level 100</p>
+            <p><strong>Semester:</strong> Semester 1</p>
+        </div>
 
-    
-        <h2 >Semester Results</h2>
+        <h2>Semester Results</h2>
         
-        <table border="2" style="width: 100%; border-collapse: collapse; text-align: left;">
-            <th>
-                <tr >
-                    <th >Course Code</th>
-                    <th >Course Title</th>
-                    <th >Credits</th>
-                    <th >Grade</th>
-                    <th >GP (Grade Point)</th>
-                </tr>
-            </th>
-            <tbody>
-                <tr>
-                    <td >BCAD108</td>
-                    <td >BUSINESS FRENCH</td>
-                    <td >3</td>
-                    <td >C+</td>
-                    <td >6</td>
-                </tr>
-                <tr>
-                    <td >BCPC108</td>
-                    <td >INTRODUCTION TO MANAGEMENT</td>
-                    <td >3</td>
-                    <td >A</td>
-                    <td >12</td>
-                </tr>
-                <tr>
-                    <td >BCPC112</td>
-                    <td >INTRODUCTION TO BUSINESS STATISTICS</td>
-                    <td >3</td>
-                    <td >A</td>
-                    <td >12</td>
-                </tr>
-                <tr>
-                    <td >BGEC102</td>
-                    <td >SCHOLARLY WRITING</td>
-                    <td >3</td>
-                    <td >B-</td>
-                    <td >7.5</td>
-                </tr>
-                <tr>
-                    <td >BGEC106</td>
-                    <td >LOGIC AND CRITICAL THINKING</td>
-                    <td >3</td>
-                    <td >B-</td>
-                    <td >7.5</td>
-                </tr>
-                <tr>
-                    <td >BSIT102</td>
-                    <td >PROGRAMMING FUNDAMENTALS</td>
-                    <td >3</td>
-                    <td >B+</td>
-                    <td >10.5</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr >
-                    <td colspan="2" style="padding: 10px; text-align: right;">Totals</td>
-                    <td >18</td>
-                    <td ></td>
-                    <td >55.5</td>
-                </tr>
-                <tr >
-                    <td colspan="4" style="padding: 10px; text-align: right;">Semester GPA</td>
-                    <td >3.06</td>
-                </tr>
-            </tfoot>
-        </table>
-    
-</main>
-   
-    
-    
+        <div class="table-wrapper">
+            <table border="2">
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Title</th>
+                        <th>Credits</th>
+                        <th>Grade</th>
+                        <th>GP (Grade Point)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>BCAD108</td>
+                        <td>BUSINESS FRENCH</td>
+                        <td>3</td>
+                        <td>C+</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>BCPC108</td>
+                        <td>INTRODUCTION TO MANAGEMENT</td>
+                        <td>3</td>
+                        <td>A</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>BCPC112</td>
+                        <td>INTRODUCTION TO BUSINESS STATISTICS</td>
+                        <td>3</td>
+                        <td>A</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>BGEC102</td>
+                        <td>SCHOLARLY WRITING</td>
+                        <td>3</td>
+                        <td>B-</td>
+                        <td>7.5</td>
+                    </tr>
+                    <tr>
+                        <td>BGEC106</td>
+                        <td>LOGIC AND CRITICAL THINKING</td>
+                        <td>3</td>
+                        <td>B-</td>
+                        <td>7.5</td>
+                    </tr>
+                    <tr>
+                        <td>BSIT102</td>
+                        <td>PROGRAMMING FUNDAMENTALS</td>
+                        <td>3</td>
+                        <td>B+</td>
+                        <td>10.5</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2" style="text-align: right;">Totals</td>
+                        <td>18</td>
+                        <td></td>
+                        <td>55.5</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="text-align: right;">Semester GPA</td>
+                        <td>3.06</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </main>
 
     <footer style="margin-top: 30px; text-align: center; font-size: 0.9em; color: #666;">
         Developed by <i>Compiler</i> &reg; &trade; 2025 <br>
