@@ -16,6 +16,7 @@ header {
   font-size: xx-large;
   font-weight: bolder;
 }
+
 nav,
 footer {
   margin: 0 0.5vw 0.25vw;
@@ -31,6 +32,7 @@ footer {
   text-align: center;
   border-radius: 0 0 5px 5px;
 }
+
 aside {
   width: 15vw;
   float: left;
@@ -44,6 +46,7 @@ aside {
   margin-left: 0.5vw;
   font-weight: bolder;
 }
+
 main {
   width: 64vw;
   float: left;
@@ -57,6 +60,7 @@ main {
   color: white;
   padding-top: 10px;
 }
+
 section {
   width: 18vw;
   border: 2px solid #551a88;
@@ -67,6 +71,7 @@ section {
   float: right;
   margin-right: 0.5vw;
 }
+
 article {
   width: 98%;
   margin: 1% 1% 0 1%;
@@ -74,6 +79,7 @@ article {
   border: 1px solid gray;
   background-color: coral;
 }
+
 footer {
   background-color: rgb(255, 193, 193);
   margin-top: 0.25vh;
@@ -91,88 +97,264 @@ nav li {
   height: auto;
   min-height: 8vh;
 }
+
 nav li:hover {
   background-color: brown;
   color: white;
   font-size: x-large;
   border-radius: 10px;
 }
+
 a > li {
   color: red;
   font-weight: bolder;
 }
+
 nav > ul {
   display: contents;
 }
+
+/* Table styling improvements */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+}
+
 tr:nth-child(even) {
   background-color: rgba(0, 0, 255, 0.6);
 }
+
 tr:last-child {
   background-color: blueviolet;
   font-size: xx-large;
 }
+
+td, th {
+  padding: 8px;
+  border: 1px solid white;
+}
+
 td:hover,
 th:hover {
   background-color: brown;
   color: white;
   font-size: xx-large;
 }
-body{
-    overflow-x: hidden;
+
+body {
+  overflow-x: hidden;
 }
+
+/* MOBILE DEVICES (Portrait phones, less than 600px) */
 @media only screen and (max-width: 600px) {
   aside,
   section {
     display: none;
   }
+  
   header {
     font-size: large;
+    width: 98vw;
+    margin: 0.25vw;
+    min-height: 10vh;
+    padding: 10px 5px;
   }
+  
+  nav {
+    width: 98vw;
+    margin: 0.25vw;
+  }
+  
+  nav li {
+    width: 95%;
+    margin: 0 2.5% 1.5vmin;
+    float: none;
+  }
+  
   label {
     display: inline-block;
     width: 80%;
   }
+  
   main {
-    width: 100%;
-    margin: 0.25vh 0.5vw;
+    width: 98vw;
+    margin: 0.25vh 0.25vw;
     text-align: justify;
+    overflow-x: auto;
+    padding: 5px;
   }
-  nav li {
-    width: 95%;
-    margin: 0 2% 1.5vmin;
+  
+  /* Table wrapper for horizontal scroll */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    font-size: 0.55rem;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
   }
+  
+  table th,
+  table td {
+    padding: 4px 6px;
+    min-width: 50px;
+    font-size: 0.5rem;
+    border: 1px solid white;
+  }
+  
+  /* Make the first column (Day/Time) sticky */
+  table th:first-child,
+  table td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: #CD853F; /* peru color */
+    z-index: 2;
+    font-weight: bold;
+  }
+  
+  table tr:nth-child(even) td:first-child {
+    background-color: rgba(0, 0, 255, 0.6);
+  }
+  
+  table tr:last-child td:first-child {
+    background-color: blueviolet;
+  }
+  
+  /* Reduce hover effects on mobile */
+  td:hover,
+  th:hover {
+    font-size: 0.6rem;
+  }
+  
   iframe {
     width: 98%;
   }
-  table {
-    width: 98%;
+  
+  footer {
+    width: 98vw;
+    margin: 0.25vh 0.25vw;
+    font-size: medium;
+    min-height: 8vh;
   }
 }
 
-@media only screen and ((min-width: 600px) and (max-width:992px)) {
+/* TABLET DEVICES (Portrait tablets and large phones, 600px to 992px) */
+@media only screen and (min-width: 600px) and (max-width: 992px) {
   aside,
   section {
     display: none;
   }
+  
+  header {
+    width: 98vw;
+    margin: 0.25vw;
+    font-size: x-large;
+  }
+  
   nav {
-    width: 30vw;
+    width: 28vw;
     min-height: 80vmax;
     height: auto;
     float: left;
+    margin: 0.25vh 0.5vw;
   }
+  
   nav li {
-    width: 95%;
-    margin: 0 2% 1.5vh;
+    width: 90%;
+    margin: 0 5% 1.5vh;
+    float: none;
   }
+  
   main {
-    width: 68vw;
+    width: 69vw;
     text-align: justify;
     margin: 0.25vh 0.25vw;
+    overflow-x: auto;
+    float: left;
   }
+  
+  /* Table styling for tablets */
+  table {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+    font-size: 0.7rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  table th,
+  table td {
+    padding: 6px 8px;
+    min-width: 65px;
+    font-size: 0.65rem;
+  }
+  
+  /* Sticky first column */
+  table th:first-child,
+  table td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: #CD853F;
+    z-index: 2;
+    font-weight: bold;
+  }
+  
+  table tr:nth-child(even) td:first-child {
+    background-color: rgba(0, 0, 255, 0.6);
+  }
+  
+  table tr:last-child td:first-child {
+    background-color: blueviolet;
+  }
+  
+  td:hover,
+  th:hover {
+    font-size: 0.8rem;
+  }
+  
   iframe {
     width: 98%;
   }
+  
+  footer {
+    width: 98vw;
+    margin: 0.25vh 0.25vw;
+  }
+}
+
+/* LANDSCAPE MODE for mobile devices */
+@media only screen and (max-height: 600px) and (orientation: landscape) {
+  header {
+    min-height: 12vh;
+    font-size: medium;
+  }
+  
   table {
-    width: 98%;
+    font-size: 0.5rem;
+  }
+  
+  table th,
+  table td {
+    padding: 3px 5px;
+    font-size: 0.48rem;
+    min-width: 45px;
+  }
+  
+  td:hover,
+  th:hover {
+    font-size: 0.55rem;
+  }
+}
+
+/* LARGE SCREENS (Desktops, 993px and up) */
+@media only screen and (min-width: 993px) {
+  main {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    font-size: 0.9rem;
   }
 }
